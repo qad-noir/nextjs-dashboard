@@ -36,7 +36,7 @@ export type State = {
     }
 }
 
-export async function updateInvoice(id: string, prevState: State, formData: FormData) {
+export async function updateInvoice(id: string, prevState: State, formData: FormData): Promise <State> {
 
     const validatedFields = UpdateInvoice.safeParse({
         customerId: formData.get('customerId'),
